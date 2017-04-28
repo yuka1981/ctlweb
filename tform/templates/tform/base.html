@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>{% block title %}Cloud Test Lab{% endblock title %}</title>
+	{% load staticfiles %}
+	{% load crispy_forms_tags %}
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- <link href="{% static 'css/datepicker3.css' %}" rel="stylesheet"> -->
+	<!-- <link href="{% static 'css/styles.css' %}" rel="stylesheet"> -->
+</head>
+<body>
+	<nav class="navbar navbar-static-top" style="background:#2196F3;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" style="color: #FFF">Cloud Test Lab</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#" style="color: #FFF">Result</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+				<li method="post" action="{% url 'logout' %}">
+					{% if user.is_authenticated %}
+						{% csrf_token %}
+						<input type="hidden" name="next" value="{% url 'home' %}">
+						<a class="glyphicon glyphicon-log-in">Login</a>
+					{% else %}
+						<a class="btn" href="{% url 'login' %}">登入</a>
+					{% endif %}
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<div class="section-title">
+					<h2 class="heading bold">Test Report</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#basic" aria-controls="design" role="tab" data-toggle="tab">All</a></li>
+					<li><a href="#cloudsecurity" aria-controls="mobile" role="tab" data-toggle="tab">雲端安全設計</a></li>
+					<li><a href="#clouddesign" aria-controls="social" role="tab" data-toggle="tab">雲端架構設計</a></li>
+					<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">服務可靠度</a></li>
+					<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">雲端服務管理</a></li>
+					<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">基楚設施完備性</a></li>
+				</ul>
+				<!-- tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="cloudsecurity">
+						<!-- <div class="container text-center">
+							<div class="row">
+								<p>Provides 3 Star Service Testing</p>
+							</div>
+						</div> -->
+						<div class="container">
+							<div class="row">
+								<table class="table table-default table-condensed">
+									<thead>
+										<tr>
+											<th class="col-md-2" >結果</th>
+											<th class="col-md-2" >面向</th>
+											<th class="col-md-2" >項目</th>
+											<th class="col-md-2" >指標</th>
+											<th class="col-md-4" >說明</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for result in all_result_list %}
+											<tr>
+												<td>
+													{{ result.q_category }}
+												</td>
+												<td>
+													{{ result.q_item }}
+												</td>
+												<td>
+													{{ result.q_index }}
+												</td>
+												<td>
+													{{ result.q_explanation }}
+												</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="professional">
+						<div class="container text-center">
+							<div class="row">
+								<p>Provides 4 Star Service Testing</p>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<table class="table table-default table-condensed">
+									<thead>
+										<tr>
+											<th class="col-md-2" >面向</th>
+											<th class="col-md-2" >項目</th>
+											<th class="col-md-2" >指標</th>
+											<th class="col-md-6" >說明</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for result in star4_demo_list %}
+											<tr>
+												<td>
+													{{ result.q_category }}
+												</td>
+												<td>
+													{{ result.q_item }}
+												</td>
+												<td>
+													{{ result.q_index }}
+												</td>
+												<td>
+													{{ result.q_explanation }}
+												</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="enterprise">
+						<div class="container text-center">
+							<div class="row">
+								<p>Provides 5 Star Service Testing</p>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<table class="table table-default table-condensed">
+									<thead>
+										<tr>
+											<th class="col-md-2" >面向</th>
+											<th class="col-md-2" >項目</th>
+											<th class="col-md-2" >指標</th>
+											<th class="col-md-6" >說明</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for result in star5_demo_list %}
+											<tr>
+												<td>
+													{{ result.q_category }}
+												</td>
+												<td>
+													{{ result.q_item }}
+												</td>
+												<td>
+													{{ result.q_index }}
+												</td>
+												<td>
+													{{ result.q_explanation }}
+												</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+	<!-- <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script> -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- <script src="{% static 'js/chart.min.js' %}"></script>
+	<script src="{% static 'js/chart-data.js' %}"></script>
+	<script src="{% static 'js/easypiechart.js' %}"></script>
+	<script src="{% static 'js/easypiechart-data.js' %}"></script>
+	<script src="{% static 'js/bootstrap-datepicker.js' %}"></script> -->
+	<script>
+		$(function(){$("[data-toggle='popover").popover();});
+	</script>
+</body>
+</html>

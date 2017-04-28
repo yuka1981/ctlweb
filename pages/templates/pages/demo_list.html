@@ -1,0 +1,142 @@
+{% extends 'pages/base.html' %}
+{% load staticfiles %}
+{% block demo_list %}
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<div class="section-title">
+						<h1 class="heading bold">Comparison</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="active"><a href="#basic" aria-controls="design" role="tab" data-toggle="tab">Basic</a></li>
+						<li><a href="#professional" aria-controls="mobile" role="tab" data-toggle="tab">Professional</a></li>
+						<li><a href="#enterprise" aria-controls="social" role="tab" data-toggle="tab">Enterprise</a></li> </ul>
+						<!-- tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="basic">
+								<div class="container text-center">
+									<div class="row">
+										<p>Provides 3 Star Service Testing</p>
+									</div>
+								</div>
+								<div class="container">
+									<div class="row">
+										<table class="table table-default table-condensed">
+											<thead>
+												<tr>
+													<th class="col-md-2" >面向</th>
+													<th class="col-md-2" >項目</th>
+													<th class="col-md-2" >指標</th>
+													<th class="col-md-6" >說明</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for result in star3_demo_list %}
+													<tr>
+														<td>
+															{{ result.q_category }}
+														</td>
+														<td>
+															{{ result.q_item }}
+														</td>
+														<td>
+															{{ result.q_index }}
+														</td>
+														<td>
+															{{ result.q_explanation }}
+														</td>
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="professional">
+								<div class="container text-center">
+									<div class="row">
+										<p>Provides 4 Star Service Testing</p>
+									</div>
+								</div>
+								<div class="container">
+									<div class="row">
+										<table class="table table-default table-condensed">
+											<thead>
+												<tr>
+													<th class="col-md-2" >面向</th>
+													<th class="col-md-2" >項目</th>
+													<th class="col-md-2" >指標</th>
+													<th class="col-md-6" >說明</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for result in star4_demo_list %}
+													<tr>
+														<td>
+															{{ result.q_category }}
+														</td>
+														<td>
+															{{ result.q_item }}
+														</td>
+														<td>
+															{{ result.q_index }}
+														</td>
+														<td>
+															{{ result.q_explanation }}
+														</td>
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="enterprise">
+								<div class="container text-center">
+									<div class="row">
+										<p>Provides 5 Star Service Testing</p>
+									</div>
+								</div>
+								<div class="container">
+									<div class="row">
+										<table class="table table-default table-condensed">
+											<thead>
+												<tr>
+													<th class="col-md-2" >面向</th>
+													<th class="col-md-2" >項目</th>
+													<th class="col-md-2" >指標</th>
+													<th class="col-md-6" >說明</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for result in star5_demo_list %}
+													<tr>
+														<td>
+															{{ result.q_category }}
+														</td>
+														<td>
+															{{ result.q_item }}
+														</td>
+														<td>
+															{{ result.q_index }}
+														</td>
+														<td>
+															{{ result.q_explanation }}
+														</td>
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock demo_list %}
