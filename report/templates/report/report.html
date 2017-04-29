@@ -4,170 +4,169 @@
 	<title>{% block title %}Cloud Test Lab{% endblock title %}</title>
 	{% load staticfiles %}
 	{% load crispy_forms_tags %}
-	<link href="{% static 'report/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'report/css/bootstrap.css' %}" rel="stylesheet">
 	<!-- <link href="{% static 'report/css/bootstrap.css' %}" rel="stylesheet"> -->
 	<link href="{% static 'report/css/datepicker3.css' %}" rel="stylesheet">
 	<link href="{% static 'report/css/style.css' %}" rel="stylesheet">
 	<script src="{% static 'report/js/lumino.glyphs.js' %}"></script>
 </head>
 <body>
-	<nav class="navbar navbar-static-top" style="background:#2196F3;">
+	<nav class="navbar navbar-static-top" style="background:#4b4b4b;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="{% url 'home' %}" style="color: #FFF">Cloud Test Lab</a>
 			</div>
 			<!-- <ul class="nav navbar-nav">
-				<li class="active"><a href="#" style="color: #FFF">Result</a></li>
+							<li class="active"><a href="#" style="color: #FFF">Result</a></li>
 			</ul> -->
 			<!-- <ul class="nav navbar-nav navbar-right"> -->
-				<!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-				<!-- <li method="post" action="{% url 'logout' %}">
-					{% if user.is_authenticated %}
-						{% csrf_token %}
-						<input type="hidden" name="next" value="{% url 'home' %}">
-						<a class="glyphicon glyphicon-log-in">Login</a>
-					{% else %}
-						<a class="btn" href="{% url 'login' %}">登入</a>
-					{% endif %}
-				</li>
-			</ul> -->
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12 text-center">
-				<div class="section-title">
-					<h2 class="heading bold">Test Report</h1>
-					<hr>
-				</div>
+			<!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+			<!-- <li method="post" action="{% url 'logout' %}">
+							{% if user.is_authenticated %}
+											{% csrf_token %}
+											<input type="hidden" name="next" value="{% url 'home' %}">
+											<a class="glyphicon glyphicon-log-in">Login</a>
+							{% else %}
+											<a class="btn" href="{% url 'login' %}">登入</a>
+							{% endif %}
+			</li>
+		</ul> -->
+	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 text-center">
+			<div class="section-title">
+				<h2 class="heading bold">Online Demo Report</h1>
+				<hr>
 			</div>
-			<div class="col-md-12 col-sm-12">
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#all" aria-controls="design" role="tab" data-toggle="tab">All</a></li>
-					<li><a href="#cloudsecurity" aria-controls="mobile" role="tab" data-toggle="tab">雲端安全設計</a></li>
-					<li><a href="#clouddesign" aria-controls="social" role="tab" data-toggle="tab">雲端架構設計</a></li>
-					<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">服務可靠度</a></li>
-					<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">雲端服務管理</a></li>
-					<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">基楚設施完備性</a></li>
-				</ul>
-				<!-- tab panes -->
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="all">
-						<div class="row" style="padding-top:20px">
-							<div class="col-xs-4 col-md-6">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h5>Summary</h5>
-									</div>
-									<div class="panel-body">
-										<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
-									</div>
+		</div>
+		<div class="col-md-12 col-sm-12">
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a href="#all" aria-controls="design" role="tab" data-toggle="tab">ALL</a></li>
+				<li><a href="#cloudsecurity" aria-controls="mobile" role="tab" data-toggle="tab">雲端安全設計</a></li>
+				<li><a href="#clouddesign" aria-controls="social" role="tab" data-toggle="tab">雲端架構設計</a></li>
+				<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">服務可靠度</a></li>
+				<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">雲端服務管理</a></li>
+				<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">基楚設施完備性</a></li>
+			</ul>
+			<!-- tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="all">
+					<div class="row" style="padding-top:20px">
+						<div class="col-xs-4 col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h5>測試摘要</h5>
+								</div>
+								<div class="panel-body">
+									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
 								</div>
 							</div>
-							<div class="col-xs-4 col-md-2">
-								<div class="panel panel-default">
-									<div class="panel-body easypiechart-panel">
-										<h4>已通過</h4>
-										<div class="easypiechart" id="easypiechart-green" data-percent="{{ total_pass_percent }}" >
-											<!-- <div class="easypiechart easypiechart-green" data-percent="{{ total_pass_percent }}" > -->
-											<span class="percent">{{ total_pass_percent }}%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-4 col-md-2">
-								<div class="panel panel-default">
-									<div class="panel-body easypiechart-panel">
-										<h4>未通過</h4>
-										<div class="easypiechart" id="easypiechart-red" data-percent="{{ total_fail_percent }}" >
-											<span class="percent">{{ total_fail_percent }}%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-4 col-md-2">
-								<div class="panel panel-default">
-									<div class="panel-body easypiechart-panel">
-										<h4>測試中</h4>
-										<div class="easypiechart" id="easypiechart-orange" data-percent="{{ total_pending_percent }}" >
-											<span class="percent">{{ total_pending_percent }}%</span>
-										</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>已通過</h4>
+									<div class="easypiechart" id="easypiechart-green" data-percent="{{ total_pass_percent }}" >
+										<!-- <div class="easypiechart easypiechart-green" data-percent="{{ total_pass_percent }}" > -->
+										<span class="percent">{{ total_pass_percent }}%</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div>
-							<div>
-								<span class="label" style="background-color: #00c6d7">B</span> Basic
-								<span class="label" style="background-color: #ffa400">P</span> Professional
-								<span class="label" style="background-color: #009988">E</span> Enterprise
-								<span class="label" style="background-color: #009988">U</span> Ultimate
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>未通過</h4>
+									<div class="easypiechart" id="easypiechart-red" data-percent="{{ total_fail_percent }}" >
+										<span class="percent">{{ total_fail_percent }}%</span>
+									</div>
+								</div>
 							</div>
-							<br>
 						</div>
-						<div class="container">
-							<div class="row">
-								<table class="table table-default table-condensed">
-									<thead>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>測試中</h4>
+									<div class="easypiechart" id="easypiechart-orange" data-percent="{{ total_pending_percent }}" >
+										<span class="percent">{{ total_pending_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
+					<div class="container">
+						<div class="row">
+							<table class="table table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
+										<th class="col-md-2" >面向</th>
+										<th class="col-md-2" >項目</th>
+										<th class="col-md-4" >指標/說明</th>
+										<th class="col-md-2" >佐證資料</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for result in total_result_list %}
 										<tr>
-											<th class="col-md-1" >結果</th>
-											<th class="col-md-1" >等級</th>
-											<th class="col-md-2" >面向</th>
-											<th class="col-md-2" >項目</th>
-											<th class="col-md-4" >指標/說明</th>
-											<th class="col-md-2" >佐證資料</th>
-										</tr>
-									</thead>
-									<tbody>
-										{% for result in total_result_list %}
-											<tr>
-												{% if result.status.status_name == 'pass' %}
-													<td>
-														<div>
-															<h5>
-															<span class="label label-success">
-																已通過
-															</span>
-															</h5>
-														</div>
-													</td>
-													{% elif result.status.status_name == 'fail' %}
-													<td>
-														<div>
-															<h5>
-															<span class="label label-danger">
-																未通過
-															</span>
-															</h5>
-														</div>
-													</td>
-													{% elif result.status.status_name == 'pending' %}
-													<td>
+											{% if result.status.status_name == 'pass' %}
+												<td>
+													<div>
 														<h5>
-														<span class="label label-warning">
-															待測中
+														<span class="label label-success">
+															已通過
 														</span>
 														</h5>
-													</td>
-												{% else %}
-													<td>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'fail' %}
+												<td>
+													<div>
 														<h5>
-														<span class="label label-info">
-															無資料
+														<span class="label label-danger">
+															未通過
 														</span>
 														</h5>
-													</td>
-												{% endif %}
-											</td>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'pending' %}
+												<td>
+													<h5>
+													<span class="label label-warning">
+														待測中
+													</span>
+													</h5>
+												</td>
+											{% else %}
+												<td>
+													<h5>
+													<span class="label label-info">
+														無資料
+													</span>
+													</h5>
+												</td>
+											{% endif %}
 											<td>
 												{% if result.question.q_star.star_name == 'Basic' %}
-													<h5><span class="label" style="background-color: #00c6d7">B</span></h5>
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
 													{% elif result.question.q_star.star_name == 'Professional' %}
-													<h5><span class="label" style="background-color: #ffa400">P</span></h5>
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
-													<h5><span class="label" style="background-color: #009988">E</span></h5>
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
 													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #009988">U</span></h5>
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -204,10 +203,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>Summary</h5>
+									<h5>測試摘要</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
 								</div>
 							</div>
 						</div>
@@ -242,13 +241,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- </div> -->
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
 					<div class="container">
 						<div class="row">
 							<table class="table table-default table-condensed">
 								<thead>
 									<tr>
 										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
 										<th class="col-md-2" >項目</th>
 										<th class="col-md-7" >指標/說明</th>
 										<th class="col-md-2" >佐證資料</th>
@@ -295,6 +303,17 @@
 												</td>
 											{% endif %}
 											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
 												<h5>{{ result.question.q_item }}</h5>
 											</td>
 											<td>
@@ -324,10 +343,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>Summary</h5>
+									<h5>測試摘要</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<h5>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</h5>
 								</div>
 							</div>
 						</div>
@@ -362,13 +381,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- </div> -->
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
 					<div class="container">
 						<div class="row">
 							<table class="table table-default table-condensed">
 								<thead>
 									<tr>
 										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
 										<th class="col-md-2" >項目</th>
 										<th class="col-md-7" >指標/說明</th>
 										<th class="col-md-2" >佐證資料</th>
@@ -415,6 +443,17 @@
 												</td>
 											{% endif %}
 											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
 												<h5>{{ result.question.q_item }}</h5>
 											</td>
 											<td>
@@ -444,10 +483,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>Summary</h5>
+									<h5>測試摘要</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<h5>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h5>
 								</div>
 							</div>
 						</div>
@@ -482,13 +521,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- </div> -->
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
 					<div class="container">
 						<div class="row">
 							<table class="table table-default table-condensed">
 								<thead>
 									<tr>
 										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
 										<th class="col-md-2" >項目</th>
 										<th class="col-md-7" >指標/說明</th>
 										<th class="col-md-2" >佐證資料</th>
@@ -535,6 +583,17 @@
 												</td>
 											{% endif %}
 											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
 												<h5>{{ result.question.q_item }}</h5>
 											</td>
 											<td>
@@ -564,10 +623,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>Summary</h5>
+									<h5>測試摘要</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<h5>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</h5>
 								</div>
 							</div>
 						</div>
@@ -602,13 +661,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- </div> -->
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
 					<div class="container">
 						<div class="row">
 							<table class="table table-default table-condensed">
 								<thead>
 									<tr>
 										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
 										<th class="col-md-2" >項目</th>
 										<th class="col-md-7" >指標/說明</th>
 										<th class="col-md-2" >佐證資料</th>
@@ -655,6 +723,17 @@
 												</td>
 											{% endif %}
 											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
 												<h5>{{ result.question.q_item }}</h5>
 											</td>
 											<td>
@@ -684,10 +763,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>Summary</h5>
+									<h5>測試摘要</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<h5>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
 								</div>
 							</div>
 						</div>
@@ -722,13 +801,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- </div> -->
+					<div class="container">
+						<div class="row">
+							<span class="label" style="background-color: #999999">B</span> Basic
+							<span class="label" style="background-color: #337ab7">P</span> Professional
+							<span class="label" style="background-color: #8642a9">E</span> Enterprise
+							<span class="label" style="background-color: #100099">U</span> Ultimate
+						</div>
+						<br>
+					</div>
 					<div class="container">
 						<div class="row">
 							<table class="table table-default table-condensed">
 								<thead>
 									<tr>
 										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
 										<th class="col-md-2" >項目</th>
 										<th class="col-md-7" >指標/說明</th>
 										<th class="col-md-2" >佐證資料</th>
@@ -774,6 +862,17 @@
 													</h5>
 												</td>
 											{% endif %}
+											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
 											<td>
 												<h5>{{ result.question.q_item }}</h5>
 											</td>
