@@ -140,5 +140,71 @@ $(function() {
    });
 });
 
+// category basic
+$(function() {
+    $('#basic-easypiechart-orange').easyPieChart({
+        scaleColor: false,
+        barColor: '#ffb53e'
+    });
+});
+
+$(function() {
+    $('#basic-easypiechart-red').easyPieChart({
+        scaleColor: false,
+        barColor: '#f9243f'
+    });
+});
+
+$(function() {
+   $('#basic-easypiechart-green').easyPieChart({
+       scaleColor: false,
+       barColor: '#3dad48'
+   });
+});
+
+// category professional
+$(function() {
+    $('#professional-easypiechart-orange').easyPieChart({
+        scaleColor: false,
+        barColor: '#ffb53e'
+    });
+});
+
+$(function() {
+    $('#professional-easypiechart-red').easyPieChart({
+        scaleColor: false,
+        barColor: '#f9243f'
+    });
+});
+
+$(function() {
+   $('#professional-easypiechart-green').easyPieChart({
+       scaleColor: false,
+       barColor: '#3dad48'
+   });
+});
+
+// category enterprise
+$(function() {
+    $('#enterprise-easypiechart-orange').easyPieChart({
+        scaleColor: false,
+        barColor: '#ffb53e'
+    });
+});
+
+$(function() {
+    $('#enterprise-easypiechart-red').easyPieChart({
+        scaleColor: false,
+        barColor: '#f9243f'
+    });
+});
+
+$(function() {
+   $('#enterprise-easypiechart-green').easyPieChart({
+       scaleColor: false,
+       barColor: '#3dad48'
+   });
+});
+
 // $('#calendar').datepicker({
 // 	});

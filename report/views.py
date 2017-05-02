@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.template import loader, Context
 from django.template.loader import get_template
 
+import operator
+
 # Create your views here.
 def count_function(input_query):
 	pass_count = 0.0
@@ -34,6 +36,11 @@ def select_category(result_id, category_pk):
 
 	return result_list
 
+def select_package(result_id, q_star_pk):
+
+	result_list = Result.objects.filter(result_id=result_id).filter(question__q_star__pk=q_star_pk)
+
+	return result_list
 
 def result(request):
 
@@ -55,6 +62,17 @@ def result(request):
 	infrastructure_result_list = select_category(1, 5)
 	infrastructure_pass_percent, infrastructure_fail_percent, infrastructure_pending_percent = count_function(infrastructure_result_list)
 
+
+	basic_result_list = select_package(1, 1)
+	basic_pass_percent, basic_fail_percent, basic_pending_percent = count_function(basic_result_list)
+
+	professional_result_list_tmp = select_package(1, 2) | basic_result_list
+	professional_result_list = sorted(professional_result_list_tmp, key=operator.attrgetter('question.q_id'))
+	professional_pass_percent, professional_fail_percent, professional_pending_percent = count_function(professional_result_list)
+
+	enterprise_result_list_tmp = select_package(1, 3) | professional_result_list_tmp | basic_result_list
+	enterprise_result_list = sorted(enterprise_result_list_tmp, key=operator.attrgetter('question.q_id'))
+	enterprise_pass_percent, enterprise_fail_percent, enterprise_pending_percent = count_function(enterprise_result_list)
 
 	return render(request, 'report/report.html', locals())
 	# return render_to_response('tform/result.html', {'result_list':result_list}, Context)
