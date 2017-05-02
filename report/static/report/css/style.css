@@ -209,6 +209,21 @@
 #infrastructure-easypiechart-orange .percent { color: #ffb53e;}
 #infrastructure-easypiechart-red .percent { color: #ef4040;}
 
+#basic-easypiechart-green .percent { color: #3dad48;}
+#basic-easypiechart-teal .percent { color: #1ebfae;}
+#basic-easypiechart-orange .percent { color: #ffb53e;}
+#basic-easypiechart-red .percent { color: #ef4040;}
+
+#professional-easypiechart-green .percent { color: #3dad48;}
+#professional-easypiechart-teal .percent { color: #1ebfae;}
+#professional-easypiechart-orange .percent { color: #ffb53e;}
+#professional-easypiechart-red .percent { color: #ef4040;}
+
+#enterprise-easypiechart-green .percent { color: #3dad48;}
+#enterprise-easypiechart-teal .percent { color: #1ebfae;}
+#enterprise-easypiechart-orange .percent { color: #ffb53e;}
+#enterprise-easypiechart-red .percent { color: #ef4040;}
+
 
 /*Calendar Widget*/
 

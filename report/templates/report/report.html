@@ -17,18 +17,18 @@
 				<a class="navbar-brand" href="{% url 'home' %}" style="color: #FFF">Cloud Test Lab</a>
 			</div>
 			<!-- <ul class="nav navbar-nav">
-							<li class="active"><a href="#" style="color: #FFF">Result</a></li>
+								<li class="active"><a href="#" style="color: #FFF">Result</a></li>
 			</ul> -->
 			<!-- <ul class="nav navbar-nav navbar-right"> -->
 			<!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
 			<!-- <li method="post" action="{% url 'logout' %}">
-							{% if user.is_authenticated %}
-											{% csrf_token %}
-											<input type="hidden" name="next" value="{% url 'home' %}">
-											<a class="glyphicon glyphicon-log-in">Login</a>
-							{% else %}
-											<a class="btn" href="{% url 'login' %}">登入</a>
-							{% endif %}
+								{% if user.is_authenticated %}
+													{% csrf_token %}
+													<input type="hidden" name="next" value="{% url 'home' %}">
+													<a class="glyphicon glyphicon-log-in">Login</a>
+								{% else %}
+													<a class="btn" href="{% url 'login' %}">登入</a>
+								{% endif %}
 			</li>
 		</ul> -->
 	</div>
@@ -49,9 +49,13 @@
 				<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">服務可靠度</a></li>
 				<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">雲端服務管理</a></li>
 				<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">基楚設施完備性</a></li>
+				<li><a href="#basic" aria-controls="social" role="tab" data-toggle="tab">Basic</a></li>
+				<li><a href="#professional" aria-controls="social" role="tab" data-toggle="tab">Professional</a></li>
+				<li><a href="#enterprise" aria-controls="social" role="tab" data-toggle="tab">Enterprise</a></li>
 			</ul>
 			<!-- tab panes -->
 			<div class="tab-content">
+				<!-- all section -->
 				<div role="tabpanel" class="tab-pane active" id="all">
 					<div class="row" style="padding-top:20px">
 						<div class="col-xs-4 col-md-6">
@@ -197,6 +201,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of all section -->
+
+				<!-- cloudsecurity section -->
 				<div role="tabpanel" class="tab-pane" id="cloudsecurity">
 					<!-- <div class="container text-center"> -->
 					<div class="row" style="padding-top:20px">
@@ -337,6 +344,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of cloudsecurity section -->
+
+				<!-- clouddesign section -->
 				<div role="tabpanel" class="tab-pane" id="clouddesign">
 					<!-- <div class="container text-center"> -->
 					<div class="row" style="padding-top:20px">
@@ -477,6 +487,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of clouddesign section -->
+
+				<!-- highability section -->
 				<div role="tabpanel" class="tab-pane" id="highability">
 					<!-- <div class="container text-center"> -->
 					<div class="row" style="padding-top:20px">
@@ -617,6 +630,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of highability section -->
+
+				<!-- cloudmanage section -->
 				<div role="tabpanel" class="tab-pane" id="cloudmanage">
 					<!-- <div class="container text-center"> -->
 					<div class="row" style="padding-top:20px">
@@ -757,6 +773,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of cloudmanage section -->
+
+				<!-- infrastructure section -->
 				<div role="tabpanel" class="tab-pane" id="infrastructure">
 					<!-- <div class="container text-center"> -->
 					<div class="row" style="padding-top:20px">
@@ -897,21 +916,419 @@
 						</div>
 					</div>
 				</div>
+				<!-- end of infrastructure section -->
+
+				<!-- basic package section -->
+				<div role="tabpanel" class="tab-pane" id="basic">
+					<!-- <div class="container text-center"> -->
+					<div class="row" style="padding-top:20px">
+						<div class="col-xs-4 col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h5>Basic Package</h5>
+								</div>
+								<div class="panel-body">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>已通過</h4>
+									<div class="easypiechart" id="basic-easypiechart-green" data-percent="{{ basic_pass_percent }}" >
+										<span class="percent">{{ basic_pass_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>未通過</h4>
+									<div class="easypiechart" id="basic-easypiechart-red" data-percent="{{ basic_fail_percent }}" >
+										<span class="percent">{{ basic_fail_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>測試中</h4>
+									<div class="easypiechart" id="basic-easypiechart-orange" data-percent="{{ basic_pending_percent }}" >
+										<span class="percent">{{ basic_pending_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<table class="table table-default table-condensed">
+								<thead>
+									<tr>
+										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
+										<th class="col-md-2" >項目</th>
+										<th class="col-md-7" >指標/說明</th>
+										<th class="col-md-2" >佐證資料</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for result in basic_result_list %}
+										<tr>
+											{% if result.status.status_name == 'pass' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-success">
+															已通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'fail' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-danger">
+															未通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'pending' %}
+												<td>
+													<h5>
+													<span class="label label-warning">
+														待測中
+													</span>
+													</h5>
+												</td>
+											{% else %}
+												<td>
+													<h5>
+													<span class="label label-info">
+														無資料
+													</span>
+													</h5>
+												</td>
+											{% endif %}
+											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
+												<h5>{{ result.question.q_item }}</h5>
+											</td>
+											<td>
+												<div id="security">
+													<h5><a data-toggle="collapse" data-parent="#security" href="#">
+														{{ result.question.q_index }}
+													</a>
+													</h5>
+													<div id="{{result.question.q_id}}" class="collapse in">
+														<p>{{result.question.q_explanation}}</p>
+													</div>
+												</div>
+											</td>
+											<td>
+												<h5>No File.</h5>
+											</td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- professional tab section -->
+				<div role="tabpanel" class="tab-pane" id="professional">
+					<!-- <div class="container text-center"> -->
+					<div class="row" style="padding-top:20px">
+						<div class="col-xs-4 col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h5>Professional Package</h5>
+								</div>
+								<div class="panel-body">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>已通過</h4>
+									<div class="easypiechart" id="professional-easypiechart-green" data-percent="{{ professional_pass_percent }}" >
+										<span class="percent">{{ professional_pass_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>未通過</h4>
+									<div class="easypiechart" id="professional-easypiechart-red" data-percent="{{ professional_fail_percent }}" >
+										<span class="percent">{{ professional_fail_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>測試中</h4>
+									<div class="easypiechart" id="professional-easypiechart-orange" data-percent="{{ professional_pending_percent }}" >
+										<span class="percent">{{ professional_pending_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<table class="table table-default table-condensed">
+								<thead>
+									<tr>
+										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
+										<th class="col-md-2" >項目</th>
+										<th class="col-md-7" >指標/說明</th>
+										<th class="col-md-2" >佐證資料</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for result in professional_result_list %}
+										<tr>
+											{% if result.status.status_name == 'pass' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-success">
+															已通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'fail' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-danger">
+															未通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'pending' %}
+												<td>
+													<h5>
+													<span class="label label-warning">
+														待測中
+													</span>
+													</h5>
+												</td>
+											{% else %}
+												<td>
+													<h5>
+													<span class="label label-info">
+														無資料
+													</span>
+													</h5>
+												</td>
+											{% endif %}
+											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
+												<h5>{{ result.question.q_item }}</h5>
+											</td>
+											<td>
+												<div id="security">
+													<h5><a data-toggle="collapse" data-parent="#security" href="#">
+														{{ result.question.q_index }}
+													</a>
+													</h5>
+													<div id="{{result.question.q_id}}" class="collapse in">
+														<p>{{result.question.q_explanation}}</p>
+													</div>
+												</div>
+											</td>
+											<td>
+												<h5>No File.</h5>
+											</td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- end of professional section -->
+
+				<!-- enterprise package section -->
+				<div role="tabpanel" class="tab-pane" id="enterprise">
+					<!-- <div class="container text-center"> -->
+					<div class="row" style="padding-top:20px">
+						<div class="col-xs-4 col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h5>Enterprise Package</h5>
+								</div>
+								<div class="panel-body">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>已通過</h4>
+									<div class="easypiechart" id="enterprise-easypiechart-green" data-percent="{{ enterprise_pass_percent }}" >
+										<span class="percent">{{ enterprise_pass_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>未通過</h4>
+									<div class="easypiechart" id="enterprise-easypiechart-red" data-percent="{{ enterprise_fail_percent }}" >
+										<span class="percent">{{ enterprise_fail_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-2">
+							<div class="panel panel-default">
+								<div class="panel-body easypiechart-panel">
+									<h4>測試中</h4>
+									<div class="easypiechart" id="enterprise-easypiechart-orange" data-percent="{{ enterprise_pending_percent }}" >
+										<span class="percent">{{ enterprise_pending_percent }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<table class="table table-default table-condensed">
+								<thead>
+									<tr>
+										<th class="col-md-1" >結果</th>
+										<th class="col-md-1" >方案</th>
+										<th class="col-md-2" >項目</th>
+										<th class="col-md-7" >指標/說明</th>
+										<th class="col-md-2" >佐證資料</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for result in enterprise_result_list %}
+										<tr>
+											{% if result.status.status_name == 'pass' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-success">
+															已通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'fail' %}
+												<td>
+													<div>
+														<h5>
+														<span class="label label-danger">
+															未通過
+														</span>
+														</h5>
+													</div>
+												</td>
+												{% elif result.status.status_name == 'pending' %}
+												<td>
+													<h5>
+													<span class="label label-warning">
+														待測中
+													</span>
+													</h5>
+												</td>
+											{% else %}
+												<td>
+													<h5>
+													<span class="label label-info">
+														無資料
+													</span>
+													</h5>
+												</td>
+											{% endif %}
+											<td>
+												{% if result.question.q_star.star_name == 'Basic' %}
+													<h5><span class="label" style="background-color: #999999">B</span></h5>
+													{% elif result.question.q_star.star_name == 'Professional' %}
+													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise' %}
+													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
+													{% elif result.question.q_star.star_name == 'Ultimate' %}
+													<h5><span class="label" style="background-color: #100099">U</span></h5>
+												{% endif %}
+											</td>
+											<td>
+												<h5>{{ result.question.q_item }}</h5>
+											</td>
+											<td>
+												<div id="security">
+													<h5><a data-toggle="collapse" data-parent="#security" href="#">
+														{{ result.question.q_index }}
+													</a>
+													</h5>
+													<div id="{{result.question.q_id}}" class="collapse in">
+														<p>{{result.question.q_explanation}}</p>
+													</div>
+												</div>
+											</td>
+											<td>
+												<h5>No File.</h5>
+											</td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- end of enterprise seciton -->
 			</div>
 		</div>
 	</div>
-</div>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-<script src="{% static 'report/js/jquery-1.11.1.min.js' %}"></script>
-<script src="{% static 'report/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'report/js/chart.min.js' %}"></script>
-<script src="{% static 'report/js/chart-data.js' %}"></script>
-<script src="{% static 'report/js/easypiechart.js' %}"></script>
-<script src="{% static 'report/js/easypiechart-data.js' %}"></script>
-<script src="{% static 'report/js/bootstrap-datepicker.js' %}"></script>
-<script>
-	$(function(){$("[data-toggle='popover").popover();});
-</script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+	<script src="{% static 'report/js/jquery-1.11.1.min.js' %}"></script>
+	<script src="{% static 'report/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'report/js/chart.min.js' %}"></script>
+	<script src="{% static 'report/js/chart-data.js' %}"></script>
+	<script src="{% static 'report/js/easypiechart.js' %}"></script>
+	<script src="{% static 'report/js/easypiechart-data.js' %}"></script>
+	<script src="{% static 'report/js/bootstrap-datepicker.js' %}"></script>
+	<script>
+		$(function(){$("[data-toggle='popover").popover();});
+	</script>
 </body>
 </html>
