@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, Category, Method, Status, StarLevel, Question, Result, DataUpload
+from .models import Project, Category, Method, Status, StarLevel, Question, Result, DataUpload, WebContent
 
 class ResultInline(admin.TabularInline):
     model = Result
@@ -36,3 +36,7 @@ class ResultsAdmin(admin.ModelAdmin):
 @admin.register(DataUpload)
 class DataUploadsAdmin(admin.ModelAdmin):
     list_display = ('file_description', 'file_upload', 'file_time_at',)
+
+@admin.register(WebContent)
+class WebContentsAdmin(admin.ModelAdmin):
+    list_display = ('web_category_name', 'web_category_content')

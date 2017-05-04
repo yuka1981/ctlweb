@@ -43,12 +43,12 @@
 		</div>
 		<div class="col-md-12 col-sm-12">
 			<ul class="nav nav-tabs" role="tablist">
-				<li class="active"><a href="#all" aria-controls="design" role="tab" data-toggle="tab">ALL</a></li>
-				<li><a href="#cloudsecurity" aria-controls="mobile" role="tab" data-toggle="tab">雲端安全設計</a></li>
-				<li><a href="#clouddesign" aria-controls="social" role="tab" data-toggle="tab">雲端架構設計</a></li>
-				<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">服務可靠度</a></li>
-				<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">雲端服務管理</a></li>
-				<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">基楚設施完備性</a></li>
+				<li class="active"><a href="#all" aria-controls="design" role="tab" data-toggle="tab">雲服務安全暨技術驗測表</a></li>
+				<li><a href="#cloudsecurity" aria-controls="mobile" role="tab" data-toggle="tab">{{ web_content_catg_pk1.web_category_name.category_name }}</a></li>
+				<li><a href="#clouddesign" aria-controls="social" role="tab" data-toggle="tab">{{ web_content_catg_pk2.web_category_name.category_name }}</a></li>
+				<li><a href="#highability" aria-controls="social" role="tab" data-toggle="tab">{{ web_content_catg_pk3.web_category_name.category_name }}</a></li>
+				<li><a href="#cloudmanage" aria-controls="social" role="tab" data-toggle="tab">{{ web_content_catg_pk4.web_category_name.category_name }}</a></li>
+				<li><a href="#infrastructure" aria-controls="social" role="tab" data-toggle="tab">{{ web_content_catg_pk5.web_category_name.category_name }}</a></li>
 				<li><a href="#basic" aria-controls="social" role="tab" data-toggle="tab">Basic</a></li>
 				<li><a href="#professional" aria-controls="social" role="tab" data-toggle="tab">Professional</a></li>
 				<li><a href="#enterprise" aria-controls="social" role="tab" data-toggle="tab">Enterprise</a></li>
@@ -61,10 +61,13 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+									<p>
+										<h5>本驗測目的在於透過驗測與檢視，以使用者角度為出發點，確保雲端服務符合雲端特性所需之各面向。在雲端特性技術面擬定採購雲端產品服務所關心的評估項目，例雲端安全設計、雲端架構設計、服務可靠度、服務管理、基礎設施完整度等五大議題，進行第三方產品驗測。</h5>
+										<h5>驗測方式分驗測及檢視2種型式，測試為測試平台開立測試個案執行測試並記錄結果；檢視為受測廠商進行操作說明，測試平台進行檢視並記錄結果。</h5>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -105,7 +108,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -169,8 +172,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -210,10 +213,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+									<h5>{{ web_content_catg_pk1.web_category_content }}</h5>
 								</div>
 							</div>
 						</div>
@@ -253,7 +256,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -316,8 +319,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -353,10 +356,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</h5>
+									<h5>{{ web_content_catg_pk2.web_category_content }}</h5>
 								</div>
 							</div>
 						</div>
@@ -396,7 +399,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -459,8 +462,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -496,10 +499,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h5>
+									<h5>{{ web_content_catg_pk3.web_category_content }}</h5>
 								</div>
 							</div>
 						</div>
@@ -539,7 +542,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -602,8 +605,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -639,10 +642,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</h5>
+									<h5>{{ web_content_catg_pk4.web_category_content }}</h5>
 								</div>
 							</div>
 						</div>
@@ -682,7 +685,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -745,8 +748,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -782,10 +785,10 @@
 						<div class="col-xs-4 col-md-6">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h5>測試摘要</h5>
+									<h5>項目說明</h5>
 								</div>
 								<div class="panel-body">
-									<h5>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</h5>
+									<h5>{{ web_content_catg_pk5.web_category_content }}</h5>
 								</div>
 							</div>
 						</div>
@@ -825,7 +828,7 @@
 							<span class="label" style="background-color: #999999">B</span> Basic
 							<span class="label" style="background-color: #337ab7">P</span> Professional
 							<span class="label" style="background-color: #8642a9">E</span> Enterprise
-							<span class="label" style="background-color: #100099">U</span> Ultimate
+							<span class="label" style="background-color: #100099">E+</span> Enterprise+
 						</div>
 						<br>
 					</div>
@@ -888,8 +891,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -1021,8 +1024,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -1153,8 +1156,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>
@@ -1286,8 +1289,8 @@
 													<h5><span class="label" style="background-color: #337ab7">P</span></h5>
 													{% elif result.question.q_star.star_name == 'Enterprise' %}
 													<h5><span class="label" style="background-color: #8642a9">E</span></h5>
-													{% elif result.question.q_star.star_name == 'Ultimate' %}
-													<h5><span class="label" style="background-color: #100099">U</span></h5>
+													{% elif result.question.q_star.star_name == 'Enterprise+' %}
+													<h5><span class="label" style="background-color: #100099">E+</span></h5>
 												{% endif %}
 											</td>
 											<td>

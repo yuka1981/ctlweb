@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from .models import Project, Category, Method, Status, StarLevel, Question, Result
+from .models import Project, Category, Method, Status, StarLevel, Question, Result, WebContent
 from django.http import HttpResponse
 from django.template import loader, Context
 from django.template.loader import get_template
@@ -73,6 +73,13 @@ def result(request):
 	enterprise_result_list_tmp = select_package(1, 3) | professional_result_list_tmp | basic_result_list
 	enterprise_result_list = sorted(enterprise_result_list_tmp, key=operator.attrgetter('question.q_id'))
 	enterprise_pass_percent, enterprise_fail_percent, enterprise_pending_percent = count_function(enterprise_result_list)
+
+	# web_content
+	web_content_catg_pk1 = WebContent.objects.filter(pk=1)[0]
+	web_content_catg_pk2 = WebContent.objects.filter(pk=2)[0]
+	web_content_catg_pk3 = WebContent.objects.filter(pk=3)[0]
+	web_content_catg_pk4 = WebContent.objects.filter(pk=4)[0]
+	web_content_catg_pk5 = WebContent.objects.filter(pk=5)[0]
 
 	return render(request, 'report/report.html', locals())
 	# return render_to_response('tform/result.html', {'result_list':result_list}, Context)

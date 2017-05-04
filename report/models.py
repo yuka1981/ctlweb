@@ -68,7 +68,15 @@ class Result(models.Model):
 	question = models.ForeignKey('Question', related_name='result_items')
 	status = models.ForeignKey('Status', related_name='status')
 	evidence = models.CharField(max_length=200, blank=True)
-	result_file = models.ForeignKey('DataUpload', related_name='dataupload', blank=True)
+	result_file = models.ForeignKey('DataUpload', related_name='dataupload', blank=True, null=True)
 
 	def __str__(self):
 	 	return str(self.result_id)
+
+class WebContent(models.Model):
+	web_category_name = models.ForeignKey('Category', related_name='web_category')
+	web_category_content = models.TextField(blank=True)
+
+	# def __str__(self):
+	# 	return self.web_category_name
+
