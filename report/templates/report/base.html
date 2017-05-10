@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>{% block title %}Cloud Test Lab{% endblock title %}</title>
+	{% load staticfiles %}
+	{% load crispy_forms_tags %}
+	<link href="{% static 'report/css/bootstrap.css' %}" rel="stylesheet">
+	<!-- <link href="{% static 'report/css/bootstrap.css' %}" rel="stylesheet"> -->
+	<link href="{% static 'report/css/datepicker3.css' %}" rel="stylesheet">
+	<link href="{% static 'report/css/style.css' %}" rel="stylesheet">
+	<script src="{% static 'report/js/lumino.glyphs.js' %}"></script>
+</head>
+<body>
+	<!-- navigation bar -->
+	<nav class="navbar navbar-static-top" style="background:#4b4b4b;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="{% url 'home' %}" style="color: #FFF">
+					Cloud Test Lab
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 text-center">
+			<div class="section-title">
+				<h2 class="heading bold">Online Demo Report</h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	</div>
+	{% block all %}{% endblock all %}
+	{% block category %}{% endblock category %}
+
+
+	<script src="{% static 'report/js/jquery-1.11.1.min.js' %}"></script>
+	<script src="{% static 'report/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'report/js/chart.min.js' %}"></script>
+	<script src="{% static 'report/js/chart-data.js' %}"></script>
+	<script src="{% static 'report/js/easypiechart.js' %}"></script>
+	<script src="{% static 'report/js/easypiechart-data.js' %}"></script>
+	<script src="{% static 'report/js/bootstrap-datepicker.js' %}"></script>
+	<script>
+		$(function(){$("[data-toggle='popover").popover();});
+	</script>
+</body>
+</html>
