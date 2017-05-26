@@ -17,7 +17,7 @@ SECRET_KEY = '+c!9n3ohh-mmh4lezj*e9afex%ld3_dubcu*%p)nozoxso(td_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '61.66.218.136', 'iso19086.org', 'cloudtaas.org' ]
+ALLOWED_HOSTS = [ '127.0.0.1', '61.66.218.136', 'iso19086.org', 'cloudtaas.org' ]
 
 
 # Application definition
