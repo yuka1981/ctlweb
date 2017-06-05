@@ -1,15 +1,15 @@
-{% extends 'pages/base.html' %} {% block section_content %} {% load staticfiles %}
+{% extends 'pages/base_ch.html' %} {% block section_content %} {% load staticfiles %}
 <!-- home section -->
 <section id="home">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <!-- <h3>WEB DESIGN / WEB DEVELOPMENT / SOCIAL MEDIA</h3> -->
-                <h3>Cloud Security / Cloud Performance / IV&V</h3>
+                <h3>雲端安全 / 雲端效能 / IV&V</h3>
                 <h1>Cloud Testing as a Service</h1>
                 <hr>
-                <a href="#work" class="smoothScroll btn btn-danger">What we do</a>
-                <a href="#contact" class="smoothScroll btn btn-default">Contact us</a>
+                <a href="#work" class="smoothScroll btn btn-danger">服務項目</a>
+                <a href="#contact" class="smoothScroll btn btn-default">連絡我們</a>
                 <!-- <a href="#" class="smoothScroll btn btn-default">Testing content</a> -->
             </div>
         </div>
@@ -22,66 +22,65 @@
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
                     <strong>01</strong>
-                    <h1 class="heading bold">WHAT WE DO</h1>
+                    <h1 class="heading bold">服務項目</h1>
                     <hr>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
                     <i class="icon-cloud medium-icon"></i>
-                    <h3>Cloud Security</h3>
-                    <h3>Testing</h3>
+                    <h3>雲端安全檢測</h3>
                     <hr>
-                    <p>Web/SaaS Security Testing</p>
-                    <p>HOST Security Testing</p>
-                    <p>Source Code Security Testing</p>
+                    <p>Web/SaaS 安全檢測</p>
+                    <p>主機安全掃瞄</p>
+                    <p>源碼安全掃瞄</p>
+                    <p>主機/網站 滲透測試</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
                     <i class="icon-mobile medium-icon"></i>
-                    <h3>Performance</h3>
-                    <h3>Testing</h3>
+                    <h3>效能測試</h3>
                     <hr>
-                    <p>Cloud Performance Tuning</p>
-                    <p>Capacity Evaluation</p>
-                    <p>Availability Improvement</p>
+                    <p>雲端服務效能調教</p>
+                    <p>雲端服務承載力</p>
+                    <p>雲端服務可用性</p>
+                    <p>item</p>
+
                 </div>
 				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
                     <i class="icon-mobile medium-icon"></i>
-                    <h3>IoT Cloud</h3>
-                    <h3>Readiness Assessment Testing</h3>
+                    <h3>物聯網雲端驗證評估測試</h3>
                     <hr>
-                    <p>Gateway capacity</p>
-                    <p>Message ELT performance</p>
-                    <p>Rules Engine efficiency</p>
-                    <p>Data Storage</p>
+                    <p>閘道承載力</p>
+                    <p>訊息 ELT 效能</p>
+                    <p>規則引擎承載力</p>
+                    <p>資料儲存</p>
                 </div>
             </div>
             <div class="row">
               <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
                     <i class="icon-laptop medium-icon"></i>
-                    <h3>Cloud Migration</h3>
-                    <h3>Assessment Testing</h3>
+                    <h3>雲端遷移評估測試</h3>
                     <hr>
                     <p>Traditional to cloud Architecture</p>
-                    <p>Private to Public Cloud migration</p>
-                    <p>Configuration testing</p>
+                    <p>私有雲遷移至公有雲</p>
+                    <p>雲架構測試</p>
+                    <p>item</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
                     <i class="icon-compass medium-icon"></i>
-                    <h3>Cloud Computing</h3>
-                    <h3>Technology Validation</h3>
+                    <h3>雲端運算技術驗證</h3>
                     <hr>
-                    <p>Multi-tenancy</p>
+                    <p>多租戶驗證服務</p>
                     <p>Broad Network Access</p>
-                    <p>Resource Pooling / Rapid Elasticity</p>
-                    <p>Measured Service</p>
+                    <p>資源池 / 快速彈性擴展</p>
+                    <p>多租戶計量服務</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
                     <i class="icon-chat medium-icon"></i>
-                    <h3>Private Testing Cloud Solution</h3>
-                    <h3>[comming soon]</h3>
+                    <h3>私有雲解決方案 [即將推出]</h3>
+
                     <hr>
-                    <p>Build on OpenStack to help enterprises managing and testing their Web sites or SaaS.</p>
+                    <p>搭建 OpenStack 私有雲測試環境解決方案</p>
                 </div>
               <!--   <div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
                     <i class="icon-browser medium-icon"></i>
@@ -101,7 +100,7 @@
             <div class="col-md-12 col-sm-12 text-center">
                 <div class="section-title">
                     <strong>02</strong>
-                    <h1 class="heading bold">ABOUT US</h1>
+                    <h1 class="heading bold">關於我們</h1>
                     <hr>
                 </div>
             </div>
@@ -109,13 +108,13 @@
                 <img src="{% static 'images/about-img.jpg' %}" class="img-responsive" alt="about img">
             </div>
             <div class="col-md-6 col-sm-12">
-                <h3 class="bold">Cloud Testing Lab</h3>
+                <h3 class="bold">雲服務驗測實驗室</h3>
                 <h1 class="heading bold">Web Testing Team From Taiwan</h1>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#history" aria-controls="design" role="tab" data-toggle="tab">History</a></li>
-                    <li><a href="#experience" aria-controls="experience" role="tab" data-toggle="tab">Experience</a></li>
-                    <li><a href="#pre_web_site" aria-controls="pre_web_site" role="tab" data-toggle="tab">Previous Web site</a></li>
+                    <li class="active"><a href="#history" aria-controls="design" role="tab" data-toggle="tab">歷史沿革</a></li>
+                    <li><a href="#experience" aria-controls="experience" role="tab" data-toggle="tab">驗測經驗</a></li>
+                    <li><a href="#pre_web_site" aria-controls="pre_web_site" role="tab" data-toggle="tab">Previous Web pre_web_site</a></li>
                 </ul>
                 <!-- tab panes -->
                 <div class="tab-content">
@@ -217,17 +216,17 @@
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
                     <strong>03</strong>
-                    <h1 class="heading bold">OUR PORTFOLIO</h1>
+                    <h1 class="heading bold">合作案例介紹</h1>
                     <hr>
                 </div>
                 <!-- ISO section -->
                 <div class="iso-section">
                     <ul class="filter-wrapper clearfix">
                         <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".cloud">CLOUD</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".iot">IoT</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".cloud">雲服務</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".iot">物聯網</a></li>
                         <li><a href="#" class="opc-main-bg" data-filter=".ivandv">IV&V</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".consulting">CONSULTING</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".consulting">顧問服務</a></li>
                     </ul>
                     <div class="iso-box-section wow fadeIn" data-wow-delay="0.9s">
                         <div class="iso-box-wrapper col4-iso-box">
@@ -260,7 +259,7 @@
             <div class="col-md-12 col-sm-12 text-center">
                 <div class="section-title">
                     <strong>04</strong>
-                    <h1 class="heading bold">OUR PRICING</h1>
+                    <h1 class="heading bold">價格</h1>
                     <hr>
                 </div>
             </div>
@@ -268,14 +267,14 @@
                 <div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
                     <div class="plan_title">
                         <i class="icon-mobile medium-icon"></i>
-                        <h3>Cloud Security</h3>
+                        <h3>雲服務安全性</h3>
                         <h2><span>Start From</span></h2>
-                        <h2><span>NTD</span> $12,500</h2>
+                        <h2><span>NTD</span>$12,500</h2>
                     </div>
                     <ul>
-                        <li>Web Vulnerability Assessment</li>
-                        <li>Host OS Vulnerability Assessment</li>
-                        <li>Source Code Static Assessment</li>
+                        <li>網站弱點評估</li>
+                        <li>主機弱點評估</li>
+                        <li>程式原始碼安全性評估</li>
                     </ul>
                     <!-- <button class="btn btn-warning">Get it now</button> -->
                 </div>
@@ -284,14 +283,14 @@
                 <div class="plan plan-two wow bounceIn" data-wow-delay="0.3s">
                     <div class="plan_title">
                         <i class="icon-desktop medium-icon"></i>
-                        <h3>Cloud Performance</h3>
+                        <h3>雲服務效能驗測</h3>
                         <h2><span>Start From</span></h2>
-                        <h2><span>NTD</span> $70,000</h2>
+                        <h2><span>NTD</span>$70,000</h2>
                     </div>
                     <ul>
-                        <li>Load / Stress Testing</li>
-                        <li>Capacity Testing</li>
-                        <li>Availability Testing</li>
+                        <li>壓力測試</li>
+                        <li>承載力測試</li>
+                        <li>可用性測試</li>
                     </ul>
                     <!-- <button class="btn btn-warning">Take this!</button> -->
                 </div>
@@ -302,7 +301,7 @@
                         <i class="icon-cloud medium-icon"></i>
                         <h3>IV&V</h3>
                         <h2><span>Start From</span></h2>
-                        <h2><span>NTD</span> $100,000</h2>
+                        <h2><span>NTD</span>$100,000</h2>
                     </div>
                     <ul>
                         <li>Web IV&V</li>
@@ -322,26 +321,26 @@
             <div class="col-md-12 col-sm-12 text-center">
                 <div class="section-title">
                     <strong>05</strong>
-                    <h1 class="heading bold">CONTACT US</h1>
+                    <h1 class="heading bold">連絡我們</h1>
                     <hr>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 contact-info">
-                <h2 class="heading bold">CONTACT INFO</h2>
-                <p>If you are interested web testing / load performance / security, please contact us for detail information.</p>
+                <h2 class="heading bold">連絡資訊</h2>
+                <p>如果您對網站安全性評估，效能測試有興趣，請連絡我們以獲取更多詳細資訊。</p>
                 <div class="col-md-6 col-sm-4">
                     <h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> EMAIL</h3>
-                    <p>Jeff Cheng</p>
-                    <p>jeff@cloudtaas.org</p>
+                    <p>鄭子立 Jeff Cheng</p>
+                    <p>jeffcheng@cloudtaas.org</p>
                 </div>
                 <div class="col-md-6 col-sm-4">
                     <h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i> PHONES</h3>
-                    <p>Jeff Cheng</p>
-                    <p>0909-433-227</p>
+                    <p>鄭子立 Jeff Cheng</p>
+                    <p>886-909-433-227</p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-               <!--  <form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">
+             <!--    <form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">
                     <div class="col-md-6 col-sm-6">
                         <input type="text" class="form-control" placeholder="Name" name="name">
                     </div>

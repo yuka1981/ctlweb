@@ -7,6 +7,9 @@ from pages.models import DemoQuestion
 def home(request):
 	return render(request, 'pages/home.html')
 
+def home_ch(request):
+	return render(request, 'pages/home_ch.html')
+
 def demo_list(request):
 	star3_demo_list = DemoQuestion.objects.filter(q_star=1)
 	star4_demo_list_temp = DemoQuestion.objects.filter(q_star=2) | star3_demo_list
