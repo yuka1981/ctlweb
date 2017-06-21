@@ -29,7 +29,7 @@ def count_function(input_query):
 # def result(request):
 # 	return render(request, 'tform/result.html')
 
-def result(request):
+def quzpage(request):
 
 	result_list = Result.objects.filter(result_id=1)
 	pass_percent, fail_percent, pending_percent = count_function(result_list)

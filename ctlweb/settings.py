@@ -24,6 +24,7 @@ ALLOWED_HOSTS = [ '127.0.0.1', '61.66.218.136', 'iso19086.org', 'cloudtaas.org' 
 
 INSTALLED_APPS = [
     'crispy_forms',
+    'tform',
     'pages',
     'report',
     'base',

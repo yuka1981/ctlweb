@@ -4,8 +4,8 @@ import operator
 from pages.models import DemoQuestion
 
 # Create your views here.
-def home(request):
-	return render(request, 'pages/home.html')
+def home_en(request):
+	return render(request, 'pages/home_en.html')
 
 def home_ch(request):
 	return render(request, 'pages/home_ch.html')
